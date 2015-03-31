@@ -1,4 +1,4 @@
-!"(uinamespace getvariable 'BIS_fnc_effectFired')"
+!"(uinamespace getvariable 'BIS_fnc_effectFired')" !="BIS_fnc_selectrandom"
 !"_onScreenTime,"
 
 
@@ -9,7 +9,7 @@
 
 
 
-
+!"_zombie enableFatigue false;" 
 
 
 
@@ -18,7 +18,7 @@
 !="FPS: %1 | PLAYERS: %2 | DAMAGE: %3 | KRYPTO: %4 | HUNGER: %5 | THIRST: %6 | SOILED: %7 | GRIDREF: %8", round diag_fps, count playableUnits, damage player, EPOCH_playerCrypto, EPOCH_playerHunger, EPOCH_playerThirst, EPOCH_playerSoiled, mapGridPosition player, _counter""
 
 !="if(!isPlayer _x)then{_x allowDamage"
-!="execVM \"semClient.sqf\"" !="execVM \"\\q\\addons\\zombiemission\\init.sqf\"" !="execVM \"\MPMissions\epoch.Chernarus\scripts\fn_statusBar.sqf\""
+!="execVM \"semClient.sqf\"" !="execVM \"\\q\\addons\\zombiemission\\init.sqf\"" !="execVM \"zombie\\shaun.sqf\""
 
 
 !"_this select 0 addMagazines [_this select 5, 1];" !"this" !"addHeadgear" !"addMagazines" !"addWeapon" 
@@ -44,12 +44,12 @@
 
 
 
-!"([4654.62,9593.63,0] nearestObject 145259) setDamage 1;"
+!"([4654.62,9593.63,0] nearestObject 145259) setDamage 1;"!"_lockedTarget setDamage (damage _lockedTarget + 0.05);"
 
 
 
 
-
+ !"_zombie addEventHandler"
 !"ZupaKeyUpWorking = (findDisplay 46) displayAddEventHandler ['KeyUp', '_this call ZHB_fnc_handleKey'];"
 
 
