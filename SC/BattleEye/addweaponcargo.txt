@@ -1,1 +1,1 @@
-!="(hk416|hk416_v|hk416c_d|hk417c|hk417c_d|l119|l119_v|l119_d|m24|lrr|Mk48_F|M240_F|mg3_F|M60_F|bizon|pkm_F|asval|g36c|mk16|mk17|g3|fal|sr25|mk17s|m110)_mas" " !="launch_(RPG32|NLAW|Titan_short|Titan)_F"  !="srifle_LRR_SOS_F"
+!="(hk416|hk416_v|hk416c_d|hk417c|hk417c_d|l119|l119_v|l119_d|m24|lrr|Mk48_F|M240_F|mg3_F|M60_F|bizon|pkm_F|asval|g36c|mk16|mk17|g3|fal|sr25|mk17s|m110)_mas" !="launch_(RPG32|NLAW|Titan_short|Titan)_F"  !="srifle_LRR_SOS_F" !="srifle_LRR_SOS_F" !"arifle_mas_" !"srifle_mas_" !"hgun_mas_" !"LMG_mas_" !"mas_launch_"
