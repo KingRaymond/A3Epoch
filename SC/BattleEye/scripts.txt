@@ -20,7 +20,7 @@
 7 playableunits					!="FPS: %1 | PLAYERS: %2 | DAMAGE: %3 | KRYPTO: %4 | HUNGER: %5 | THIRST: %6 | SOILED: %7 | GRIDREF: %8", round diag_fps, count playableUnits, damage player, EPOCH_playerCrypto, EPOCH_playerHunger, EPOCH_playerThirst, EPOCH_playerSoiled, mapGridPosition player, _counter""
 
 7 allowDamage					!="if(!isPlayer _x)then{_x allowDamage"
-7 exec							!="execVM \"semClient.sqf\"" !="execVM \"\\q\\addons\\zombiemission\\init.sqf\"" !="execVM \"\MPMissions\epoch.Chernarus\scripts\fn_statusBar.sqf\"" !="execVM \"zombie\\shaun.sqf\"" !="[] execVM "cmEarplugs\cm_veh_fun.sqf";" !="traders\init.sqf";"
+7 exec							!="execVM \"semClient.sqf\"" !="execVM \"\\q\\addons\\zombiemission\\init.sqf\"" !="execVM \"\MPMissions\epoch.Chernarus\scripts\fn_statusBar.sqf\"" !="execVM \"zombie\\shaun.sqf\"" !="[] execVM "cmEarplugs\cm_veh_fun.sqf";" !="traders\init.sqf";" !="ScarCode\sMenuInit.sqf"
 
 
 1 addMagazine 					!"_this select 0 addMagazines [_this select 5, 1];" !"this" !"addHeadgear" !"addMagazines" !"addWeapon" !="if !(player canAdd (_x select 0)) exitWith {};\nplayer addMagazine[_x select 0, _x select 1];"
@@ -39,7 +39,7 @@
 
 
 
-7 createDialog 					!="createDialog \"Z_HUD_Builder\";" !="createDialog "HS_trader_dialog";"
+7 createDialog 					!="createDialog \"Z_HUD_Builder\";" !="createDialog "HS_trader_dialog";" !="createDialog 'SC_sMenu'"
 7 deleteMarker					!="deleteMarkerLocal format["\"SEM_MissionMarker" !"_markerPos = _this select" !="_markeradmin"
 7 setMarker	 					!="Local" !"_marker" !="_markeradmin"
 7 createMarker 					!="createMarkerLocal [format["\"SEM_MissionMarker" !"_marker"
@@ -51,14 +51,14 @@
 
 
 
-7 addEventHandler 				 !"_zombie addEventHandler" !"playZSoundHurt = [_this select 0, \"hurt\"];"
-7 displayAddEventHandler		!"ZupaKeyUpWorking = (findDisplay 46) displayAddEventHandler ['KeyUp', '_this call ZHB_fnc_handleKey'];" !"cmPress_F4" !"cmPress_F5" !"cmPress_F6" !"cmPress_Insert" !"cmPress_Home" !"cmPress_RightControl" !"cmPress_RightAlt" !"cmPress_DownArrow" !"cmPress_UpArrow" !"cmPress_LeftArrow" !"cmPress_RightArrow"
+7 addEventHandler 				!"_zombie addEventHandler" !"playZSoundHurt = [_this select 0, \"hurt\"];" !"HandleDamage" 
+7 displayAddEventHandler		!"ZupaKeyUpWorking = (findDisplay 46) displayAddEventHandler ['KeyUp', '_this call ZHB_fnc_handleKey'];" !"cmPress_F4" !"cmPress_F5" !"cmPress_F6" !"cmPress_Insert" !"cmPress_Home" !"cmPress_RightControl" !"cmPress_RightAlt" !"cmPress_DownArrow" !"cmPress_UpArrow" !"cmPress_LeftArrow" !"cmPress_RightArrow" !="_sMenuEH = (findDisplay 46) displayAddEventHandler [\"KeyDown\", \"if(_this select 1 == \"+str (_config select 1)+\" and !dialog) then { createDialog'SC_sMenu' };false;\"];"
 
 
 
 
 
-7 displayRemoveEventHandler		!"(findDisplay 46) displayRemoveEventHandler ['KeyUp',ZupaKeyUpWorking];" !"cmPress_F4" !"cmPress_F5" !"cmPress_F6" !"cmPress_Insert" !"cmPress_Home" !"cmPress_RightControl" !"cmPress_RightAlt" !"cmPress_DownArrow" !"cmPress_UpArrow" !"cmPress_LeftArrow" !"cmPress_RightArrow"
+7 displayRemoveEventHandler		!"(findDisplay 46) displayRemoveEventHandler ['KeyUp',ZupaKeyUpWorking];" !"cmPress_F4" !"cmPress_F5" !"cmPress_F6" !"cmPress_Insert" !"cmPress_Home" !"cmPress_RightControl" !"cmPress_RightAlt" !"cmPress_DownArrow" !"cmPress_UpArrow" !"cmPress_LeftArrow" !"cmPress_RightArrow" !="(findDisplay 46) displayRemoveEventHandler [\"KeyDown\", _evHandlerCheck];"
 
 
 7 drawIcon3D					!"_dest = _dest modelToWorldVisual _coords;"

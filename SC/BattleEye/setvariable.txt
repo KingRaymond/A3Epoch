@@ -1,1 +1,1 @@
-!="NibbleHint" !="HasEarplugMenu" !"gem" !="bis_fnc_objectvar_var" = "BIS_fnc_objectVar_obj2_1280"
+!="NibbleHint" !="HasEarplugMenu" !"gem" !="bis_fnc_objectvar_var" = "BIS_fnc_objectVar_obj2_1280" !="halvwtd"
