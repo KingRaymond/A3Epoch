@@ -1,1 +1,1 @@
-!="NibbleHint"
+!="NibbleHint" !="HasEarplugMenu" !="BIS_fnc_objectVar_obj2_1288" !="HALV_takegive" !="HSPV_traderrequest"
